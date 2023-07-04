@@ -23,15 +23,12 @@ class Solution {
             current = next;
         }
         
-//         now that the linkedlist is reversed, we can calculate the decimal value using the formula (googled formula)
-        while(prev.next != null) {
+//         prev is now set the current, which is why this logic works, although it doesn't make sense. It's not really prev anymore but because we reversed it thats why we have to use this name
+        while(prev != null) {
             n += prev.val * Math.pow(2, exponent);
             prev = prev.next;
             exponent++;
         }
-        
-//         this is to get the last value in the linked list, because prev.next == null ends it before it does the logic inside of the while loop right before the null node
-        n += prev.val * Math.pow(2, exponent);
         
         return n;
     }
