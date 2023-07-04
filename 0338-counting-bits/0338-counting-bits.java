@@ -4,9 +4,19 @@ class Solution {
         
         ans[0] = 0;
         
+        // for (int i = 1; i <= n; i ++) {
+        //     ans[i] = ans[i/2] + i % 2;
+        //     System.out.println(ans[1/2]);
+        // }
+        
         for (int i = 1; i <= n; i ++) {
-           ans[i] = ans[i/2] + i % 2;
+            if((i & 1) == 0) {
+                ans[i] = ans[i / 2];
+            } else {
+                ans[i] = ans[i - 1] + 1;
+            }
         }
+        
         return ans;
     }
 }
