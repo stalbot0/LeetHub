@@ -9,14 +9,19 @@ class Solution {
             currWindow += nums[i];
         }
         
+//         set the max to the current window to compare
         int maxSum = currWindow;
         
+//         start iterating at k, to nums.length
         for (int i = k; i < nums.length; i++) {
+//             add the value at i
             currWindow += nums[i];
+//             remove the value before
             currWindow -= nums[i - k];
+//             compare the current against max sum and store
             maxSum = Math.max(maxSum, currWindow);
         }
-        
+//         put the variables into doubles
         double max = maxSum;
         double k2 = k;
         
