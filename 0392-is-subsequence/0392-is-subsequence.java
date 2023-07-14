@@ -12,6 +12,7 @@ class Solution {
             // always increment p2 anyway after the condition is checked
             p2++;
         }
+        // check to see if the left pointer made it all the way to the end of s, if it didn't then it would return false
         return p1 == left;
     }
 }
