@@ -18,3 +18,21 @@ var canPlaceFlowers = function(flowerbed, n) {
     }
     return plantedFlowers >= n;
 };
+
+// var canPlaceFlowers = function(flowerbed, n) {
+//     flowerbed.unshift(0); // Add a boundary element at the beginning
+//     flowerbed.push(0); // Add a boundary element at the end
+    
+//     var plantedFlowers = 0;
+//     for (let i = 1; i < flowerbed.length - 1; i += 2) {
+//         if (flowerbed[i] === 0 && flowerbed[i - 1] === 0 && flowerbed[i + 1] === 0) {
+//             flowerbed[i] = 1;
+//             plantedFlowers++;
+//         }
+//         if (plantedFlowers >= n) {
+//             return true; // Early exit if the required number of flowers has been planted
+//         }
+//     }
+    
+//     return plantedFlowers >= n;
+// };
